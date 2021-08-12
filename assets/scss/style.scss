@@ -86,7 +86,7 @@ html {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
   font-weight: 700;
-  background-color: #eeedec;
+  background-color: #f8f8f8;
   color: #000;
   @include mq {
     font-size: pxtovwSP(16);
@@ -347,12 +347,11 @@ body.appear .contents-wrapper {
 header
 -------------------- */
 .header {
-  margin: 0 auto;
   position: absolute;
   width: 100%;
   height: 70px;
   top: 20px;
-  padding: 0 110px;
+  padding: 0 130px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -369,7 +368,6 @@ header
   }
 
   &__item {
-    text-align: center;
     margin-right: 32px;
 
     &:last-of-type {
@@ -410,9 +408,10 @@ main
 .main {
   width: 100%;
   height: 100vh;
+  margin-bottom: 200px;
 
   @include mq {
-    width: 100%;
+    margin-bottom: 0;
   }
 
   &__logo-container {
@@ -421,7 +420,6 @@ main
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
     -webkit-transform: translateY(-50%) translateX(-50%);
-    margin: auto;
 
     @include mq {
       top: 43%;
@@ -436,7 +434,6 @@ main
   }
 
   &__subtitle {
-    display: block;
     padding-top: 60px;
     font-size: 20px;
     text-align: center;
@@ -454,8 +451,6 @@ main
     width: 20px;
     height: 50px;
     cursor: pointer;
-    color: #000;
-    text-decoration: none;
     border: 2px solid #000;
     border-radius: 1em;
     font-weight: 300;
@@ -489,13 +484,19 @@ main
     span {
       position: absolute;
       top: 15%;
-      left: 0.4em;
+      left: 6px;
       display: block;
-      width: 0.25em;
-      height: 0.25em;
-      border-radius: 50%;
+      width: 4px;
+      height: 4px;
+      border-radius: 4px;
       background: #5582b5;
       animation: 2s small-dot-move infinite running ease-out;
+      @include mq {
+        left: pxtovwSP(6);
+        width: pxtovwSP(4);
+        height: pxtovwSP(4);
+        border-radius: pxtovwSP(4);
+      }
     }
   }
 
@@ -518,7 +519,6 @@ PROFILE
 -------------------- */
 .profile {
   width: 100%;
-  margin: 0 auto;
   margin-bottom: 130px;
   position: relative;
 
@@ -571,7 +571,6 @@ PROFILE
     top: 36px;
     left: -305px;
     z-index: 0;
-    animation: wobbling_x 0.8s ease-in-out infinite alternate, wobbling_y 1.1s ease-in-out infinite alternate;
 
     @include mq {
       width: pxtovwSP(88);
@@ -592,19 +591,6 @@ PROFILE
 
     100% {
       margin-left: 0px;
-    }
-  }
-
-  @keyframes wobbling_y {
-    0% {
-      margin-top: 0px;
-    }
-
-    100% {
-      margin-top: 16px;
-      @include mq {
-        margin-left: pxtovwSP(16);
-      }
     }
   }
 
@@ -649,7 +635,7 @@ PROFILE
   &__list {
     display: flex;
     align-items: center;
-    width: 1270px;
+    max-width: 1270px;
     margin: 0 auto;
     @include mq {
       width: 100%;
@@ -659,14 +645,15 @@ PROFILE
   &__whiteArea {
     background: #fff;
     width: 900px;
-    height: 614px;
-    padding: 127px 0 0 170px;
+    padding: 120px;
 
     &:nth-of-type(2) {
       margin: 0 auto;
       margin-right: 0;
+      padding: 120px 120px 120px 170px;
       @include mq {
         margin: 0 auto pxtovwSP(16);
+        padding: pxtovwSP(30) pxtovwSP(20);
       }
     }
 
@@ -706,7 +693,7 @@ PROFILE
     }
 
     &-text {
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 300;
       line-height: 2.14;
       @include mq {
@@ -787,7 +774,7 @@ SKILLS
 -------------------- */
 .skills {
   background-color: #fff;
-  padding: 100px 0 120px;
+  padding: 160px 0;
 
   @include mq {
     padding: pxtovwSP(50) 0 pxtovwSP(60);
@@ -947,28 +934,21 @@ WORKS
   }
 
   &__title {
-    margin: 0 auto;
-    font-size: 52px;
-    color: #fff;
+    font-size: 72px;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
+    color: #fff;
 
     @include mq {
-      width: 100%;
       font-size: pxtovwSP(38);
-      margin-bottom: pxtovwSP(40);
+      margin-bottom: pxtovwSP(42);
     }
 
     &--para {
       display: block;
-      font-size: 18px;
-      font-weight: 700;
-      letter-spacing: 0.227rem;
-      color: #fff;
-      padding-top: 10px;
+      font-size: 16px;
       @include mq {
         font-size: pxtovwSP(10);
-        padding-top: pxtovwSP(10);
       }
     }
   }
@@ -978,7 +958,7 @@ WORKS
     font-weight: 300;
     color: #fff;
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 100px;
 
     @include mq {
       font-size: pxtovwSP(14);
@@ -1002,7 +982,7 @@ WORKS
 
   &__item {
     position: relative;
-    margin-bottom: 100px;
+    margin-bottom: 140px;
 
     @include mq {
       margin-bottom: pxtovwSP(40);
@@ -1022,8 +1002,11 @@ WORKS
   }
 
   &__btnWrapper {
+    margin-top: 10px;
+    display: flex;
+
     @include mq {
-      display: flex;
+      margin-top: pxtovwSP(6);
     }
   }
 
@@ -1031,7 +1014,7 @@ WORKS
     width: 100%;
     position: relative;
     border: 1px solid #fff;
-    padding: 8px 0;
+    padding: 14px 0;
     display: block;
     text-align: center;
     text-decoration: none;
@@ -1039,18 +1022,12 @@ WORKS
     font-weight: 300;
     outline: none;
     transition: all 0.2s linear;
-    margin-top: 10px;
 
     @include mq {
       width: 100%;
       border: pxtovwSP(1) solid #fff;
       padding: pxtovwSP(12) 0;
       font-size: pxtovwSP(12);
-      margin-top: pxtovwSP(6);
-      margin-right: pxtovwSP(6);
-      &:last-of-type {
-        margin-right: 0;
-      }
     }
 
     &:hover {
@@ -1261,8 +1238,11 @@ contact
   &__bg {
     height: 240px;
     background: url("/assets/img/contact.jpg") fixed center center/cover;
-    padding: 75px 0;
     margin-bottom: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     @include mq {
       height: pxtovwSP(110);
@@ -1274,10 +1254,9 @@ contact
   }
 
   &__title {
-    margin: 0 auto;
-    font-size: 52px;
-    color: #fff;
+    font-size: 72px;
     text-align: center;
+    color: #fff;
 
     @include mq {
       font-size: pxtovwSP(38);
@@ -1285,14 +1264,9 @@ contact
 
     &--para {
       display: block;
-      font-size: 18px;
-      font-weight: 700;
-      letter-spacing: 0.227rem;
-      color: #fff;
-      padding-top: 10px;
+      font-size: 16px;
       @include mq {
         font-size: pxtovwSP(10);
-        padding-top: pxtovwSP(10);
       }
     }
   }

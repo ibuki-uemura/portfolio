@@ -1,10 +1,3 @@
-ScrollReveal().reveal(".article__list", {
-  delay: 200,
-  duration: 1600,
-  origin: "bottom",
-  distance: "40px",
-});
-
 //modal
 $("#modal").animatedModal({
   animatedIn: "fadeIn",
