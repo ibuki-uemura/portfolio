@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- エンコード指定 -->
+    <meta charset="UTF-8" />
+    <!-- viewport指定 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ページタイトル -->
+    <title>ページのタイトル</title>
+    <!-- ディスクリプション -->
+    <meta name="description" content="サイトの説明文を100文字前後、スマホ50文字程度なので前半50文字で狙いのワードを含める" />
+    <!-- インデックス・クロール回避 -->
+    <meta name="robots" content="noindex,nofollow" />
+    <!-- OGP -->
+    <meta property="og:url" content="ページのURL（絶対パス）" />
+    <meta property="og:title" content="ページのタイトル" />
+    <meta property="og:type" content="ページのタイプ（website（サイトトップなど）,blog（ブログ）,article（トップ以外記事など）,product（商品ページ））" />
+    <meta property="og:description" content="記事の抜粋" />
+    <meta property="og:image" content="画像のURL（絶対パス）" />
+    <meta name="twitter:card" content="カード種類（summary,summary_large_image）" />
+    <meta name="twitter:site" content="@Twitterユーザー名" />
+    <meta property="og:site_name" content="サイト名" />
+    <meta property="og:locale" content="ja_JP" />
+    <!-- メール・電話番号の自動リンクオフ-->
+    <meta name="format-detection" content="email=no,telephone=no,address=no" />
+    <!-- URL正規化 -->
+    <link rel="canonical" href="正規化するURL" />
+    <!-- サイトアイコン -->
+    <link rel="icon" href="img/favicon.ico" />
+    <!-- ウェブクリップ -->
+    <link rel="apple-touch-icon-precomposed" href="画像のURL（150×150推奨）" />
+    <!-- windows用タイル -->
+    <meta name="msapplication-TileImage" content="画像のURL（ウェブクリップ用画像）" />
+    <meta name="msapplication-TileColor" content="カラーコード（例：#F89174）" />
+    <!-- 全スタイル解除用CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@2.0.2/destyle.css" />
+    <!-- Pattern.css -->
+    <link href="https://unpkg.com/pattern.css" rel="stylesheet" />
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.0/swiper-bundle.css" />
+    <!-- メインCSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- webFonts読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&display=swap" rel="stylesheet" />
+
+    <!-- ※OGP未完成-->
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="index.html#profile" class="header__title"> PROFILE </a>
+          </li>
+          <li class="header__item">
+            <a href="index.html#skills" class="header__title"> SKILLS </a>
+          </li>
+          <li class="header__item">
+            <a href="index.html#works" class="header__title"> WORKS </a>
+          </li>
+          <li class="header__item">
+            <a href="index.html#contact" class="header__title"> CONTACT </a>
+          </li>
+        </ul>
+      </header>
+
+      <section class="article">
+        <h2 class="article__title">Webサイト下層ページコーディング<span class="article__title--para">ー いけざわ整骨院 －</span></h2>
+        <picture class="article__topImg">
+          <source srcset="" type="image/webp" />
+          <img src="assets/img/site__02top.png" alt="" loading="lazy" width="957" height="517" />
+        </picture>
+        <a href="https://ikezawa-s.com/" class="article__btn">View site</a>
+
+        <div class="article__bg">
+          <div class="article__wrapper">
+            <div>
+              <h3 class="article__menu">制作環境</h3>
+              <p class="article__text">
+                OS：Windows<br />
+                Tool：Visual Studio Code／XD<br />
+                言語：HTML/SCSS<br />
+                制作時間：3週間（本業と兼業）
+              </p>
+              <h3 class="article__menu">制作手順</h3>
+              <ul>
+                <li>
+                  <h4 class="article__itemTitle">① XDのカンプを元にセクション決め</h4>
+                  <p class="article__itemText">
+                    いきなりコーディングにとりかかるのではなく、<br />
+                    コーディングルールがバラけないように<br />
+                    ざっくりとカンプにメモを残していきます。<br />
+                    対応箇所が40ぺージ弱ありましたので、<br />
+                    テンプレート可できる箇所を洗い出し、コード削減に努めました。
+                  </p>
+                  <picture class="article__itemImg">
+                    <source srcset="assets/webp/article__itemimg04.webp" type="image/webp" />
+                    <img src="assets/img/article__itemimg04.jpg" alt="" loading="lazy" width="362" height="247" />
+                  </picture>
+                </li>
+                <li>
+                  <h4 class="article__itemTitle">② 用意されているイメージをWebpに変換</h4>
+                  <p class="article__itemText">
+                    今回は予めイメージが書き出されていましたので、<br />
+                    そのまま画像をまとめてWebpに変換します。<br />
+                    自分で決めたセクションに基づいてファイル名を書き換えます。
+                  </p>
+                </li>
+                <li>
+                  <h4 class="article__itemTitle">③ フォルダの用意、SCSS環境の構築</h4>
+                  <p class="article__itemText">
+                    ローカルにフォルダを作成し、環境を整えます。<br />
+                    この時点で「html・CSS」全てをリンクさせます。
+                  </p>
+                </li>
+                <li>
+                  <h4 class="article__itemTitle">④ PCコーディング</h4>
+                  <p class="article__itemText">
+                    下層ページのみのコーディングでしたので、<br />
+                    ヘッダーやフッターは据え置きでコーディングを行います。<br />
+                    初めて受注したコーディング業務でしたので、<br />
+                    ・mixinでテンプレを作成してコードの削減<br />
+                    ・スピード感をもってとにかくコードに慣れる<br />
+                    といった点に気を付けて作成を進めました。
+                  </p>
+                </li>
+                <li>
+                  <h4 class="article__itemTitle">⑤ pxズレの微調整</h4>
+                  <p class="article__itemText">
+                    画面背景にカンプ画像を敷き、pxのズレを整えます。<br />
+                    基本的にはピクセルパーフェクトを意識しています。
+                  </p>
+                </li>
+                <li>
+                  <h4 class="article__itemTitle">⑥ pxズレの微調整</h4>
+                  <p class="article__itemText">
+                    画面背景にカンプ画像を敷き、pxのズレを整えます。<br />
+                    基本的にはピクセルパーフェクトを意識しています。
+                  </p>
+                </li>
+                <li>
+                  <h4 class="article__itemTitle">⑦ レスポンシブコーディング</h4>
+                  <p class="article__itemText">
+                    ブレイクポイントの設定を行います。<br />
+                    Ipad以下の画面サイズで見た時にリキッドデザインにする為、<br />
+                    mixinを用いて計算式を用意し、全てのpxをvwへ変換します。
+                  </p>
+                </li>
+                <li>
+                  <h4 class="article__itemTitle">⑧ テスト用サーバーへのアップ・実機確認</h4>
+                  <p class="article__itemText">
+                    指定のテスト用サーバーにフォルダをアップし、<br />
+                    各PCブラウザと実機（iPhoneX）での確認を行います。
+                  </p>
+                </li>
+                <li>
+                  <h4 class="article__itemTitle">⑨ 納品</h4>
+                  <p class="article__itemText">
+                    全ての確認と微調整が完了した時点で先方に連絡し、<br />
+                    作成フォルダ一式を納品します。
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <picture class="article__preview-img">
+              <source srcset="assets/webp/site__02.webp" type="image/webp" />
+              <img src="assets/img/site__02.png" alt="" loading="lazy" width="429" height="1055" />
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <footer class="article__footer">
+        <p class="article__footer-copyright">© ibuki uemura</p>
+      </footer>
+    </div>
+
+    <!-- フッター -->
+
+    <!-- JavaScript -->
+    <!-- jQuery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- simpleParallax -->
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.1/dist/simpleParallax.min.js"></script>
+    <!-- Swiper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.0/swiper-bundle.min.js"></script>
+    <!-- scrollreveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- common -->
+    <script type="text/javascript" src="assets/js/init.js"></script>
+    <!-- scrolla -->
+    <script type="text/javascript" src="assets/js/scrolla.jquery.min.js"></script>
+  </body>
+</html>
