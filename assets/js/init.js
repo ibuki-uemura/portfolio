@@ -19,15 +19,6 @@ ScrollReveal().reveal(".profile__whiteArea-imgbg", {
   delay: 800,
 });
 
-ScrollReveal().reveal(".profile__whiteArea", {
-  duration: 2000,
-  distance: "80px",
-  origin: "bottom",
-  delay: 500,
-  desktop: false,
-  mobile: true,
-});
-
 var myswiper = new Swiper(".swiper-container", {
   centeredSlides: true,
   breakpoints: {
@@ -116,6 +107,9 @@ $("#modal").animatedModal({
   animatedIn: "fadeIn",
   animatedOut: "fadeOut",
 });
+
+const link = document.getElementById("link"); //ここではIDで指定してます。
+window.open(link, "_blank");
 
 //scrollaction
 $(window).on("scroll", function () {

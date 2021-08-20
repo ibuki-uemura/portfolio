@@ -6,194 +6,227 @@
     <!-- viewport指定 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- ページタイトル -->
-    <title>ページのタイトル</title>
-    <!-- ディスクリプション -->
-    <meta name="description" content="サイトの説明文を100文字前後、スマホ50文字程度なので前半50文字で狙いのワードを含める" />
+    <title>下層ページコーディング</title>
     <!-- インデックス・クロール回避 -->
     <meta name="robots" content="noindex,nofollow" />
     <!-- OGP -->
-    <meta property="og:url" content="ページのURL（絶対パス）" />
-    <meta property="og:title" content="ページのタイトル" />
-    <meta property="og:type" content="ページのタイプ（website（サイトトップなど）,blog（ブログ）,article（トップ以外記事など）,product（商品ページ））" />
-    <meta property="og:description" content="記事の抜粋" />
-    <meta property="og:image" content="画像のURL（絶対パス）" />
-    <meta name="twitter:card" content="カード種類（summary,summary_large_image）" />
-    <meta name="twitter:site" content="@Twitterユーザー名" />
-    <meta property="og:site_name" content="サイト名" />
+    <meta property="og:url" content="https://uemura0403.xsrv.jp/04.html" />
+    <meta property="og:title" content="下層ページコーディング" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="いけざわ整骨院" />
+    <meta property="og:image" content="https://uemura0403.xsrv.jp/assets/img/works04.jpg" />
+    <meta property="og:site_name" content="下層ページコーディング" />
     <meta property="og:locale" content="ja_JP" />
     <!-- メール・電話番号の自動リンクオフ-->
     <meta name="format-detection" content="email=no,telephone=no,address=no" />
-    <!-- URL正規化 -->
-    <link rel="canonical" href="正規化するURL" />
     <!-- サイトアイコン -->
-    <link rel="icon" href="img/favicon.ico" />
-    <!-- ウェブクリップ -->
-    <link rel="apple-touch-icon-precomposed" href="画像のURL（150×150推奨）" />
-    <!-- windows用タイル -->
-    <meta name="msapplication-TileImage" content="画像のURL（ウェブクリップ用画像）" />
-    <meta name="msapplication-TileColor" content="カラーコード（例：#F89174）" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="/android-chrome-256x256.png" />
     <!-- 全スタイル解除用CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@2.0.2/destyle.css" />
     <!-- Pattern.css -->
     <link href="https://unpkg.com/pattern.css" rel="stylesheet" />
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.0/swiper-bundle.css" />
+    <!-- animate modal -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css" />
     <!-- メインCSS -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/article.css" />
     <!-- webFonts読み込み -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;700;900&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&display=swap" rel="stylesheet" />
-
-    <!-- ※OGP未完成-->
   </head>
 
-  <body>
+  <body id="top">
     <div class="wrapper">
-      <header class="header">
-        <ul class="header__list">
-          <li class="header__item">
-            <a href="index.html#profile" class="header__title"> PROFILE </a>
-          </li>
-          <li class="header__item">
-            <a href="index.html#skills" class="header__title"> SKILLS </a>
-          </li>
-          <li class="header__item">
-            <a href="index.html#works" class="header__title"> WORKS </a>
-          </li>
-          <li class="header__item">
-            <a href="index.html#contact" class="header__title"> CONTACT </a>
-          </li>
-        </ul>
-      </header>
+      <div class="contents-wrapper">
+        <header class="header pc">
+          <a href="https://uemura0403.xsrv.jp/index.html#works" class="header__title header__title--re"> ← WORKS一覧に戻る</a>
+          <ul class="header__list">
+            <li class="header__item">
+              <a href="https://uemura0403.xsrv.jp/index.html#top" class="header__title"> TOP</a>
+            </li>
+            <li class="header__item">
+              <a href="https://uemura0403.xsrv.jp/index.html#profile" class="header__title"> PROFILE </a>
+            </li>
+            <li class="header__item">
+              <a href="https://uemura0403.xsrv.jp/index.html#skills" class="header__title"> SKILLS </a>
+            </li>
+            <li class="header__item">
+              <a href="https://uemura0403.xsrv.jp/index.html#works" class="header__title"> WORKS </a>
+            </li>
+            <li class="header__item">
+              <a href="https://uemura0403.xsrv.jp/index.html#contact" class="header__title"> CONTACT </a>
+            </li>
+          </ul>
+        </header>
 
-      <section class="article">
-        <h2 class="article__title">Webサイト下層ページコーディング<span class="article__title--para">ー いけざわ整骨院 －</span></h2>
-        <picture class="article__topImg">
-          <source srcset="" type="image/webp" />
-          <img src="assets/img/site__02top.png" alt="" loading="lazy" width="957" height="517" />
-        </picture>
-        <a href="https://ikezawa-s.com/" class="article__btn">View site</a>
-
-        <div class="article__bg">
-          <div class="article__wrapper">
-            <div>
-              <h3 class="article__menu">制作環境</h3>
-              <p class="article__text">
-                OS：Windows<br />
-                Tool：Visual Studio Code／XD<br />
-                言語：HTML/SCSS<br />
-                制作時間：3週間（本業と兼業）
-              </p>
-              <h3 class="article__menu">制作手順</h3>
-              <ul>
-                <li>
-                  <h4 class="article__itemTitle">① XDのカンプを元にセクション決め</h4>
-                  <p class="article__itemText">
-                    いきなりコーディングにとりかかるのではなく、<br />
-                    コーディングルールがバラけないように<br />
-                    ざっくりとカンプにメモを残していきます。<br />
-                    対応箇所が40ぺージ弱ありましたので、<br />
-                    テンプレート可できる箇所を洗い出し、コード削減に努めました。
-                  </p>
-                  <picture class="article__itemImg">
-                    <source srcset="assets/webp/article__itemimg04.webp" type="image/webp" />
-                    <img src="assets/img/article__itemimg04.jpg" alt="" loading="lazy" width="362" height="247" />
-                  </picture>
-                </li>
-                <li>
-                  <h4 class="article__itemTitle">② 用意されているイメージをWebpに変換</h4>
-                  <p class="article__itemText">
-                    今回は予めイメージが書き出されていましたので、<br />
-                    そのまま画像をまとめてWebpに変換します。<br />
-                    自分で決めたセクションに基づいてファイル名を書き換えます。
-                  </p>
-                </li>
-                <li>
-                  <h4 class="article__itemTitle">③ フォルダの用意、SCSS環境の構築</h4>
-                  <p class="article__itemText">
-                    ローカルにフォルダを作成し、環境を整えます。<br />
-                    この時点で「html・CSS」全てをリンクさせます。
-                  </p>
-                </li>
-                <li>
-                  <h4 class="article__itemTitle">④ PCコーディング</h4>
-                  <p class="article__itemText">
-                    下層ページのみのコーディングでしたので、<br />
-                    ヘッダーやフッターは据え置きでコーディングを行います。<br />
-                    初めて受注したコーディング業務でしたので、<br />
-                    ・mixinでテンプレを作成してコードの削減<br />
-                    ・スピード感をもってとにかくコードに慣れる<br />
-                    といった点に気を付けて作成を進めました。
-                  </p>
-                </li>
-                <li>
-                  <h4 class="article__itemTitle">⑤ pxズレの微調整</h4>
-                  <p class="article__itemText">
-                    画面背景にカンプ画像を敷き、pxのズレを整えます。<br />
-                    基本的にはピクセルパーフェクトを意識しています。
-                  </p>
-                </li>
-                <li>
-                  <h4 class="article__itemTitle">⑥ pxズレの微調整</h4>
-                  <p class="article__itemText">
-                    画面背景にカンプ画像を敷き、pxのズレを整えます。<br />
-                    基本的にはピクセルパーフェクトを意識しています。
-                  </p>
-                </li>
-                <li>
-                  <h4 class="article__itemTitle">⑦ レスポンシブコーディング</h4>
-                  <p class="article__itemText">
-                    ブレイクポイントの設定を行います。<br />
-                    Ipad以下の画面サイズで見た時にリキッドデザインにする為、<br />
-                    mixinを用いて計算式を用意し、全てのpxをvwへ変換します。
-                  </p>
-                </li>
-                <li>
-                  <h4 class="article__itemTitle">⑧ テスト用サーバーへのアップ・実機確認</h4>
-                  <p class="article__itemText">
-                    指定のテスト用サーバーにフォルダをアップし、<br />
-                    各PCブラウザと実機（iPhoneX）での確認を行います。
-                  </p>
-                </li>
-                <li>
-                  <h4 class="article__itemTitle">⑨ 納品</h4>
-                  <p class="article__itemText">
-                    全ての確認と微調整が完了した時点で先方に連絡し、<br />
-                    作成フォルダ一式を納品します。
-                  </p>
-                </li>
+        <div class="modal__wrapper">
+          <a id="modal" class="modal__content" href="#animatedModal">
+            <span class="modal__bar"></span>
+            <span class="modal__bar"></span>
+            <span class="modal__bar"></span>
+          </a>
+        </div>
+        <div id="animatedModal">
+          <div class="close-animatedModal modal__close">
+            <span class="modal__close-bar"></span>
+            <span class="modal__close-bar"></span>
+          </div>
+          <div class="modal__close-content">
+            <div class="modal__container">
+              <ul class="modal__list">
+                <li class="modal__item"><a href="https://uemura0403.xsrv.jp/index.html">TOP</a></li>
+                <li class="modal__item"><a href="https://uemura0403.xsrv.jp/index.html#profile">PROFILE</a></li>
+                <li class="modal__item"><a href="https://uemura0403.xsrv.jp/index.html#skills">SKILLS</a></li>
+                <li class="modal__item"><a href="https://uemura0403.xsrv.jp/index.html#works">WORKS</a></li>
+                <li class="modal__item"><a href="https://uemura0403.xsrv.jp/index.html#contact">CONTACT</a></li>
               </ul>
+              <div>
+                <img src="assets/img/logo__top.svg" class="modal__logo" alt="" loading="lazy" width="600" height="" />
+              </div>
             </div>
-            <picture class="article__preview-img">
-              <source srcset="assets/webp/site__02.webp" type="image/webp" />
-              <img src="assets/img/site__02.png" alt="" loading="lazy" width="429" height="1055" />
-            </picture>
           </div>
         </div>
-      </section>
 
-      <footer class="article__footer">
-        <p class="article__footer-copyright">© ibuki uemura</p>
-      </footer>
+        <section class="article">
+          <h2 class="article__title">下層ページコーディング<span class="article__title--para">ー いけざわ整骨院 －</span></h2>
+          <div class="article__top-flex">
+            <div class="article__top-wrap">
+              <div class="article__top-overflow">
+                <picture class="article__top-img">
+                  <img src="assets/img/site__02.png" alt="PCサイト全体のスクリーンショット" loading="lazy" width="647" height="" />
+                </picture>
+              </div>
+              <div class="article__scroll top-scroll"><span>Scroll</span></div>
+            </div>
+          </div>
+          <a href="https://ikezawa-s.com/" class="article__btn" target="_blank" rel="noopener noreferrer">実際のサイトを見る</a>
+
+          <div class="article__tool">
+            <ul class="article__tool-list">
+              <li class="article__tool-item">
+                <h3 class="article__tool-title Text"><span class="Text-Span JS_ScrollAnimationItem">制作環境</span></h3>
+                <p class="article__tool-text">
+                  ツール：Visual Studio Code／XD／illustrator<br />
+                  言語：HTML/SCSS<br />
+                  制作期間：3週間（本業と兼業）<br />
+                  担当範囲：コーディング（レスポンシブ含む）<br />
+                  ヘッダー・フッターを除く約30ページの記事部分
+                </p>
+              </li>
+            </ul>
+            <div class="article__preview-wrap pc">
+              <div class="article__preview-overflow">
+                <picture class="article__preview-img">
+                  <img src="assets/img/site__02sp.png" alt="PCサイト全体のスクリーンショット" loading="lazy" width="280" height="" />
+                </picture>
+              </div>
+              <div class="article__scroll">
+                <span>Scroll</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="article__bg">
+            <h3 class="article__tool-title Text"><span class="Text-Span JS_ScrollAnimationItem">工夫した点</span></h3>
+            <ul class="article__scheme">
+              <li class="article__scheme-item">
+                <picture class="article__scheme-img">
+                  <source srcset="" type="image/webp" />
+                  <img src="assets/img/site02-scheme01-1.png" alt="料金テーブル部分の画像" loading="lazy" width="425" />
+                  <p class="article__scheme-text">金額が変わった際もメンテナンスしやすいよう、上記の表はCSSのtableを使用して作成しました。</p>
+                </picture>
+              </li>
+              <li class="article__scheme-item">
+                <picture class="article__scheme-img">
+                  <source srcset="" type="image/webp" />
+                  <img src="assets/img/site02-scheme01-2.png" alt="お問い合わせフォーム部分の画像" loading="lazy" width="425" />
+                  <p class="article__scheme-text">フォームに入力している最中、選択箇所がわかりやすいようにフォーム枠を緑色に点灯させるCSSを適用しました。</p>
+                </picture>
+              </li>
+            </ul>
+
+            <h3 class="article__tool-title Text"><span class="Text-Span JS_ScrollAnimationItem">制作手順</span></h3>
+            <ul>
+              <li class="article__scheme-number">
+                <h4 class="article__scheme-subtitle">① カンプを元にセクション決め</h4>
+                <p class="article__scheme-text">
+                  コーディングルール統一のため、カンプ上にクラス名などのメモを残していきます。<br />
+                  ページ数が多いため、テンプレート可できる箇所を洗い出し、コード削減に努めました。
+                </p>
+              </li>
+              <li class="article__scheme-number">
+                <h4 class="article__scheme-subtitle">② イメージをWebpに変換</h4>
+                <p class="article__scheme-text">
+                  今回は予めイメージが書き出されていましたので、オンラインツールを使用してWebpに変換します。<br />
+                  自分で決めたセクションに基づいてファイル名を書き換えます。
+                </p>
+              </li>
+              <li class="article__scheme-number">
+                <h4 class="article__scheme-subtitle">③ SCSS環境の構築</h4>
+                <p class="article__scheme-text">ローカルにフォルダを作成し、VSCode上で環境を整えます。</p>
+              </li>
+              <li class="article__scheme-number">
+                <h4 class="article__scheme-subtitle">④ PCコーディング</h4>
+                <p class="article__scheme-text">
+                  下層ページのみのコーディングでしたので、ヘッダーやフッターは据え置きでコーディングを行います。<br />
+                  初めて受注したコーディング業務でしたので、<br />
+                  ・mixinでテンプレを作成してコードの削減<br />
+                  ・スピード感をもってとにかくコードに慣れる<br />
+                  といった点に気を付けて作成を進めました。
+                </p>
+              </li>
+              <li class="article__scheme-number">
+                <h4 class="article__scheme-subtitle">⑤ pxズレの微調整</h4>
+                <p class="article__scheme-text">
+                  画面背景にカンプ画像を敷き、pxのズレを整えます。<br />
+                  参考ツール：Chrome拡張機能「Perfect Pixel」
+                </p>
+              </li>
+              <li class="article__scheme-number">
+                <h4 class="article__scheme-subtitle">⑥ レスポンシブコーディング</h4>
+                <p class="article__scheme-text">
+                  ブレイクポイントの設定を行います。<br />
+                  リキッドデザインにする為、mixinを用いて計算式を用意し、全てのpxをvwへ変換します。
+                </p>
+              </li>
+              <li class="article__scheme-number">
+                <h4 class="article__scheme-subtitle">⑦ 実機確認</h4>
+                <p class="article__scheme-text">テスト用サーバーにフォルダをアップし、各PCブラウザと実機（iPhoneX）での確認を行います。</p>
+              </li>
+              <li class="article__scheme-number">
+                <h4 class="article__scheme-subtitle">⑧ 納品</h4>
+                <p class="article__scheme-text">全ての確認と微調整が完了した時点で先方に連絡し、作成フォルダ一式を納品します。</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- フッター -->
+        <footer class="footer">
+          <p class="footer__copyright">© ibuki uemura</p>
+        </footer>
+      </div>
     </div>
-
-    <!-- フッター -->
 
     <!-- JavaScript -->
     <!-- jQuery -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <!-- simpleParallax -->
-    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.1/dist/simpleParallax.min.js"></script>
     <!-- Swiper -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.0/swiper-bundle.min.js"></script>
     <!-- scrollreveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Typist -->
+    <script src="https://unpkg.com/ityped@1.0.3"></script>
+    <!-- animate modal -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="assets/js/animatedModal.min.js"></script>
     <!-- common -->
-    <script type="text/javascript" src="assets/js/init.js"></script>
-    <!-- scrolla -->
-    <script type="text/javascript" src="assets/js/scrolla.jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/article.js"></script>
   </body>
 </html>
